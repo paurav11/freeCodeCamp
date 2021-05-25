@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    <meta name="author" content="Paurav Shah">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="survey.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+<body>
+    <main id="main">
+    <div id="container">
+        <h1 id="title" style="color: #fff;">Product Survey Form</h1>
+        <div id="outerform">
+            <p id="description">Let us know your recent experience about our product</p>
+            <form id="survey-form" method="GET">
+               <div class="labels">
+               <label id="name-label" for="name"><span style="color: #0000ff;">*</span>Name: </label>
+               </div>
+               <div class="rightTab">
+               <input autofocus class="input-field" type="text" name="username" id="name" placeholder="Enter your name" required>
+               </div>
+               <div class="labels">
+               <label id="email-label" for="email"><span style="color: #0000ff;">*</span>Email: </label>
+               </div>
+               <div class="rightTab">
+               <input type="email" class="input-field" name="email_id" id="email" placeholder="Enter your email" required>
+               </div>
+               <div class="labels">
+               <label id="number-label" for="age"><span style="color: #0000ff;">*</span>Age: </label>
+               </div>
+               <div class="rightTab">
+               <input type="number" class="input-field" name="age" id="number" min="18" max="65" placeholder="Enter your age" required>
+               </div>
+               <div class="labels">
+               <label id="gender" for="radio">Gender: </label>
+               </div>
+               <div class="rightTab">
+               <input type="radio" name="gender" value="Male" id="radio" checked> Male<br>
+               <input type="radio" name="gender" value="Female" id="radio"> Female
+               </div>
+               <div class="labels">
+               <label for="dropdown">How was our product quality?: </label>
+               </div>
+               <div class="rightTab">
+               <select class="input-field" name="quality" id="dropdown">
+                   <option value="select an option" disabled selected>Select an option</option>
+                   <option value="Excellent">Excellent</option>
+                   <option value="Very Good">Very Good</option>
+                   <option value="Good">Good</option>
+                   <option value="Bad">Bad</option>
+                   <option value="Very Bad">Very Bad</option>
+               </select>
+               </div>
+               <div class="labels">
+               <label for="behaviour">How was the behaviour of delivery boy?: </label>
+               </div>
+               <div class="rightTab">
+               <select class="input-field" name="deliveryboy" id="behaviour">
+                   <option value="select an option" disabled selected>Select an option</option>
+                   <option value="Excellent">Excellent</option>
+                   <option value="Very Good">Very Good</option>
+                   <option value="Good">Good</option>
+                   <option value="Bad">Bad</option>
+                   <option value="Very Bad">Very Bad</option>
+               </select>
+               </div>
+               <div class="labels">
+               <label for="deliveryspeed">How was our product delivery service?: </label>
+               </div>
+               <div class="rightTab">
+               <select class="input-field" name="service" id="deliveryspeed">
+                   <option value="select an option" disabled selected>Select an option</option>
+                   <option value="Very Fast">Very Fast</option>
+                   <option value="Fast">Fast</option>
+                   <option value="Average">Average</option>
+                   <option value="Slow">Slow</option>
+                   <option value="Very Slow">Very Slow</option>
+               </select>
+               </div>
+               <div class="labels">
+               <label id="product-label" for="products">Which products do you like more from our store?: </label>
+               </div>
+               <div class="rightTab">
+               <input type="checkbox" name="products" value="Electronics" id="products"> Electronics<br>
+               <input type="checkbox" name="products" value="Paintings" id="products"> Paintings<br>
+               <input type="checkbox" name="products" value="Furniture" id="products"> Furniture<br>
+               <input type="checkbox" name="products" value="Cosmetics" id="products"> Cosmetics<br>
+               <input type="checkbox" name="products" value="Books" id="products"> Books
+               </div>
+               <div class="labels">
+               <label for="comments">Any comments or suggestions?: </label>
+               </div>
+               <div class="rightTab">
+               <textarea rows="5" cols="35" id="comments" placeholder="Enter comments here..."></textarea>
+               </div>
+               <input type="submit" name="submit" id="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    </main>
+</body>
+</html>

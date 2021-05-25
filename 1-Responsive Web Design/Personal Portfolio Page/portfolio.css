@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    width: 100%;
+    padding: 5px 20px 5px 20px;
+    background: linear-gradient(45deg,#00ffdd,#00806f);
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+}
+
+#navbar img {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #00806f;
+}
+
+#navbar img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#navbar ul {
+    margin: 20px 0 0 0;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#navbar ul li {
+    list-style-type: none;
+    padding: 0 10px 0 30px;
+}
+
+#navbar ul li a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+#navbar ul li a:hover {
+    background: #fff;
+    color: #00806f;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#welcome-section {
+    background-color: #4c00ff;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    padding: 270px 0 0 0;
+}
+
+#name {
+    font-family: 'Calligraffitti', cursive;
+    font-size: 2em;
+}
+
+#name:hover {
+    background: -webkit-linear-gradient(270deg,#ff8000,#fff,#008000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#welcome-section p {
+    font-size: 20px;
+}
+
+#projects {
+    background-color: #505050;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px 100px 20px;
+}
+
+#projectdisplay {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.project-tile {
+    background-color: #fff;
+    border: 2px solid #00ffdd;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.project-tile a {
+    text-decoration: none;
+}
+
+.project-tile:hover {
+    box-shadow: 15px 15px rgba(255,255,255,0.2);
+}
+
+.project-tile h4 {
+    padding: 20px;
+    background-color: #00806fd0;
+    color: #fff;
+    font-size: 20px;
+}
+
+#social-section {
+    background-color: #4c00ff;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0 10px 0;
+}
+
+#social-section ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+}
+
+#social-section ul li {
+    list-style-type: none;
+    padding: 20px;
+}
+
+#social-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+#social-section ul li:hover {
+    transform: scale(1.1);
+}
+
+#social-section h1 {
+    margin: 0 10px 0 10px;
+}
+
+#social-section p {
+    margin: 10px;
+    font-size: 20px;
+}
+
+hr {
+    height: 10px;
+    background-color: #00ffdd;
+}
+
+#note {
+    font-size: 20px;
+    margin: 20px 10px 10px 10px;
+}
+
+#social-section h5 {
+    margin: 10px;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 750px) {
+    #navbar {
+        background: linear-gradient(135deg,#00ffdd,#00806f);
+        text-align: center;
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    #navbar ul {
+        width: 100%;
+        margin: 0 0 10px 0;
+        flex-direction: column;
+        float: center;
+    }
+
+    #navbar ul li {
+        padding: 0 30px 0 30px;
+    }
+
+    #navbar ul li a {
+        padding: 10px;
+    }
+
+    #navbar ul li a:hover {
+        transform: scale(1);
+    }
+
+    #welcome-section {
+        padding: 250px 20px 0 20px;
+    }
+
+    #projects {
+        padding: 50px 20px 50px 20px;
+    }
+
+    #projectdisplay {
+        padding-top: 50px;
+    }
+
+    .project-tile {
+        width: 95%;
+    }
+
+    .project-tile img {
+        width: 95%;
+    }
+
+    #social-section ul li:hover {
+        transform: unset;
+    }
+}

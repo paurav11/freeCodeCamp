@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg,#0000ff,#87ceeb);
+    background-repeat: no-repeat; 
+}
+
+#container {
+    padding: 0 0 10px 0;
+    text-align: center;
+    font-family: 'Cantarell', sans-serif;
+}
+
+#container h1 {
+    padding: 15px 0 15px 0;
+}
+
+#outerform {
+    padding: 10px 0 10px 0;
+    margin: 0 240px 20px 240px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.5);
+}
+
+#survey-form {
+    padding: 30px 0 0 0;
+    line-height: 30px;
+}
+
+.labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+}
+  
+.rightTab {
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+.input-field {
+    padding: 0 5px 0 5px;
+    width: 250px;
+    height: 25px;
+    border-image-source: linear-gradient(90deg,#0000ff,#87ceeb);
+    border-width: 2px;
+    border-image-slice: 1;
+}
+
+.input-field:hover {
+    margin: 0 0 0 10px;
+}
+
+textarea {
+    padding: 0 5px 0 5px;
+    border-image-source: linear-gradient(90deg,#0000ff,#87ceeb);
+    border-width: 2px;
+    border-image-slice: 1;
+}
+
+input[type='submit'] {
+    height: 30px;
+    width: 100px;
+    margin-top: 15px;
+    background: linear-gradient(90deg,#0000ff,#87ceeb);
+    color: #fff;
+    border: transparent;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    font-size: 16px;
+}
+
+input[type='submit']:hover {
+    transition: .5s;
+    background: linear-gradient(90deg,#87ceeb,#0000ff);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1000px) {
+    #outerform {
+        margin: 0 180px 20px 180px;
+    }
+}
+
+@media only screen and (max-width:870px) {
+    #outerform {
+        margin: 0 120px 20px 120px;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    #outerform {
+        margin: 0 60px 20px 60px;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .input-field {
+        width: 80%;
+    }
+
+    textarea {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #survey-form {
+        padding-left: 20px;
+    }
+    
+    .labels {
+        width: 100%;
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    .rightTab {
+        width: 90%;
+        float: left;
+        margin: 0;
+    }
+    
+    .input-field {
+        width: 100%;
+    }
+
+    .input-field:hover {
+        margin-left: 0;
+    }
+
+    input[type='submit'] {
+        margin-left: -20px;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Technical Documentation Page</title>
+    <meta name="author" content="Paurav Shah">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="doc.css">    
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <header>SQL Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#SQL_Introduction">SQL Introduction</a></li>
+            <li><a class="nav-link" href="#SQL_Select">SQL Select</a></li>
+            <li><a class="nav-link" href="#SQL_Order_By">SQL Order By</a></li>
+            <li><a class="nav-link" href="#SQL_Insert_Into">SQL Insert Into</a></li>
+            <li><a class="nav-link" href="#SQL_Update">SQL Update</a></li>
+            <li><a class="nav-link" href="#SQL_Delete">SQL Delete</a></li>
+            <li><a class="nav-link" href="#SQL_Min_and_Max">SQL Min and Max</a></li>
+            <li><a class="nav-link" href="#SQL_Count,_Avg,_Sum">SQL Count, Avg, Sum</a></li>
+            <li><a class="nav-link" href="#SQL_Joins">SQL Joins</a></li>
+            <li><a class="nav-link" href="#SQL_Union">SQL Union</a></li>
+            <li><a class="nav-link" href="#SQL_Group_By">SQL Group By</a></li>
+            <li><a class="nav-link" href="#SQL_Having">SQL Having</a></li>
+            <li><a class="nav-link" href="#SQL_Exists">SQL Exists</a></li>
+            <li><a class="nav-link" href="#SQL_Stored_Procedures">SQL Stored Procedures</a></li>
+            <li><a class="nav-link" href="#SQL_Comments">SQL Comments</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="SQL_Introduction">
+            <header>SQL Introduction</header><br>
+            <p>SQL is a standard language for accessing and manipulating databases.</p><br>
+            <h4>What is SQL?</h4><br>            
+            <ul>
+                <li>SQL stands for Structured Query Language</li>
+                <li>SQL lets you access and manipulate databases</li>
+                <li>SQL became a standard of the American National Standards Institute 
+                    (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987</li>
+            </ul><br>
+            <h4>What Can SQL do?</h4><br>
+            <ul>
+                <li>SQL can execute queries against a database</li>
+                <li>SQL can retrieve data from a database</li>
+                <li>SQL can insert records in a database</li>
+                <li>SQL can update records in a database</li>
+                <li>SQL can delete records from a database</li>
+                <li>SQL can create new databases</li>
+                <li>SQL can create new tables in a database</li>
+                <li>SQL can create stored procedures in a database</li>
+                <li>SQL can create views in a database</li>
+                <li>SQL can set permissions on tables, procedures, and views</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="SQL_Select">
+            <header>SQL Select</header><br>
+            <p>The SELECT statement is used to select data from a database.</p><br>
+            <p>The data returned is stored in a result table, called the result-set.</p><br>
+            <h4>SELECT Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column1, column2, ...
+FROM table_name;</code>
+                </pre>
+            </div><br>
+            <p>Here, column1, column2, ... are the field names of the table you want to 
+                select data from. If you want to select all the fields available in the table, 
+                use the following syntax:</p><br>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT * FROM table_name;</code>
+                </pre>
+            </div><br>
+            <h4>SELECT Column Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT CustomerName, City FROM Customers;</code>
+                </pre>
+            </div><br>
+            <h4>SELECT DISTINCT Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT DISTINCT column1, column2, ...
+FROM table_name;</code>
+                </pre>
+            </div><br>
+            <h4>SELECT DISTINCT Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT DISTINCT Country FROM Customers;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Order_By">
+            <header>SQL Order By</header><br>
+            <p>The ORDER BY keyword is used to sort the result-set in ascending or descending 
+                order.</p><br>
+            <p>The ORDER BY keyword sorts the records in ascending order by default. 
+                To sort the records in descending order, use the DESC keyword.</p><br>
+            <h4>ORDER BY Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;</code>
+                </pre>
+            </div><br>
+            <h4>ORDER BY Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT * FROM Customers
+ORDER BY Country;</code>
+                </pre>
+            </div><br>
+            <h4>ORDER BY DESC Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT * FROM Customers
+ORDER BY Country DESC;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Insert_Into">
+            <header>SQL Insert Into</header><br>
+            <p>The INSERT INTO statement is used to insert new records in a table.</p><br>
+            <h4>INSERT INTO Syntax</h4><br>
+            <p>It is possible to write the INSERT INTO statement in two ways.</p><br>
+            <p>The first way specifies both the column names and the values to be inserted:</p><br>
+            <div class="example">
+                <pre>
+                    <code>
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);</code>
+                </pre>
+            </div><br>
+            <p>If you are adding values for all the columns of the table, you do not need to 
+                specify the column names in the SQL query. However, make sure the order of the 
+                values is in the same order as the columns in the table. The INSERT INTO syntax 
+                would be as follows:</p><br>
+            <div class="example">
+                <pre>
+                    <code>
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);</code>
+                </pre>
+            </div><br>
+            <h4>INSERT INTO Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+INSERT INTO Customers 
+(CustomerName, ContactName, Address, City, PostalCode, Country) 
+VALUES 
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Update">
+            <header>SQL Update</header><br>
+            <p>The UPDATE statement is used to modify the existing records in a table.</p><br>
+            <h4>UPDATE Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;</code>
+                </pre>
+            </div><br>
+            <h4>UPDATE Table</h4>
+            <div class="example">
+                <pre>
+                    <code>
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Delete">
+            <header>SQL Delete</header><br>
+            <p>The DELETE statement is used to delete existing records in a table.</p><br>
+            <h4>DELETE Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+DELETE FROM table_name WHERE condition;</code>
+                </pre>
+            </div><br>
+            <h4>SQL DELETE Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';</code>
+                </pre>
+            </div><br>
+            <h4>Delete All Records</h4>
+            <div class="example">
+                <pre>
+                    <code>
+DELETE FROM table_name;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Min_and_Max">
+            <header>SQL Min and Max</header><br>
+            <p>The MIN() function returns the smallest value of the selected column.</p><br>
+            <p>The MAX() function returns the largest value of the selected column.</p><br>
+            <h4>MIN() Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;</code>
+                </pre>
+            </div><br>
+            <h4>MIN() Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;</code>
+                </pre>
+            </div><br>
+            <h4>MAX() Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;</code>
+                </pre>
+            </div><br>
+            <h4>MAX() Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT MAX(Price) AS LargestPrice
+FROM Products;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Count,_Avg,_Sum">
+            <header>SQL Count, Avg, Sum</header><br>
+            <p>The COUNT() function returns the number of rows that matches a specified criteria.</p><br>
+            <p>The AVG() function returns the average value of a numeric column.</p><br>
+            <p>The SUM() function returns the total sum of a numeric column.</p><br>
+            <h4>COUNT() Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;</code>
+                </pre>
+            </div><br>
+            <h4>COUNT() Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT COUNT(ProductID) FROM Products;</code>
+                </pre>
+            </div><br>
+            <h4>AVG() Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;</code>
+                </pre>
+            </div><br>
+            <h4>AVG() Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT AVG(Price) FROM Products;</code>
+                </pre>
+            </div><br>
+            <h4>SUM() Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;</code>
+                </pre>
+            </div><br>
+            <h4>SUM() Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT SUM(Quantity) FROM OrderDetails;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Joins">
+            <header>SQL Joins</header><br>
+            <p>A JOIN clause is used to combine rows from two or more tables, based on a related 
+                column between them.</p><br>
+            <h4>Different Types of SQL JOINs</h4><br>
+            <p>Here are the different types of the JOINs in SQL:</p><br>
+            <ul>
+                <li>(INNER) JOIN: Returns records that have matching values in both tables</li>
+                <li>LEFT (OUTER) JOIN: Returns all records from the left table, and the 
+                    matched records from the right table</li>
+                <li>RIGHT (OUTER) JOIN: Returns all records from the right table, and the 
+                    matched records from the left table</li>                    
+                <li>FULL (OUTER) JOIN: Returns all records when there is a match in either 
+                    left or right table</li>
+            </ul><br>
+            <h4>INNER JOIN Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;</code>
+                </pre>
+            </div><br>
+            <h4>SQL INNER JOIN Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT Orders.OrderID, Customers.CustomerName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;</code>
+                </pre>
+            </div><br>
+            <h4>LEFT JOIN Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;</code>
+                </pre>
+            </div><br>
+            <h4>SQL LEFT JOIN Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;</code>
+                </pre>
+            </div><br>
+            <h4>RIGHT JOIN Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;</code>
+                </pre>
+            </div><br>
+            <h4>SQL RIGHT JOIN Example</h4>
+             <div class="example">
+                <pre>
+                    <code>
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;</code>
+                </pre>
+            </div><br>
+            <h4>ULL OUTER JOIN Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column_name(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;</code>
+                </pre>
+            </div><br>
+            <h4>SQL FULL OUTER JOIN Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Union">
+            <header>SQL Union</header><br>
+            <p>The UNION operator is used to combine the result-set of two or more SELECT statements.</p><br>
+            <ul>
+                <li>Each SELECT statement within UNION must have the same number of columns</li>
+                <li>The columns must also have similar data types</li>
+                <li>The columns in each SELECT statement must also be in the same order</li>
+            </ul><br>
+            <h4>UNION Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;</code>
+                </pre>
+            </div><br>
+            <h4>SQL UNION Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Group_By">
+            <header>SQL Group By</header><br>
+            <p>The GROUP BY statement group rows that have the same values into summary rows, 
+                like "find the number of customers in each country".</p><br>
+            <p>The GROUP BY statement is often used with aggregate functions 
+                (COUNT, MAX, MIN, SUM, AVG) to group the result-set by one or more columns.</p><br>
+            <h4>GROUP BY Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);</code>
+                </pre>
+            </div><br>
+            <h4>SQL GROUP BY Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Having">
+            <header>SQL Having</header><br>
+            <p>The HAVING clause was added to SQL because the WHERE keyword could not be 
+                used with aggregate functions.</p><br>
+            <h4>HAVING Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);</code>
+                </pre>
+            </div><br>
+            <h4>SQL HAVING Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Exists">
+            <header>SQL Exists</header><br>
+            <p>The EXISTS operator is used to test for the existence of any record in a subquery.</p><br>
+            <p>The EXISTS operator returns true if the subquery returns one or more records</p><br>
+            <h4>EXISTS Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS
+(SELECT column_name FROM table_name WHERE condition);</code>
+                </pre>
+            </div><br>
+            <h4>SQL EXISTS Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+SELECT SupplierName
+FROM Suppliers
+WHERE EXISTS (SELECT ProductName FROM Products 
+WHERE Products.SupplierID = Suppliers.supplierID 
+AND Price < 20);</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Stored_Procedures">
+            <header>SQL Stored Procedures</header><br>
+            <p>A stored procedure is a prepared SQL code that you can save, so the code can 
+                be reused over and over again.</p><br>
+            <p>So if you have an SQL query that you write over and over again, save it as 
+                a stored procedure, and then just call it to execute it.</p><br>
+            <p>You can also pass parameters to a stored procedure, so that the stored procedure 
+                can act based on the parameter value(s) that is passed.</p><br>
+            <h4>Stored Procedure Syntax</h4>
+            <div class="example">
+                <pre>
+                    <code>
+CREATE PROCEDURE procedure_name
+AS
+sql_statement
+GO;</code>
+                </pre>
+            </div><br>
+            <h4>Execute a Stored Procedure</h4>
+            <div class="example">
+                <pre>
+                    <code>
+EXEC procedure_name;</code>
+                </pre>
+            </div><br>
+            <h4>Stored Procedure Example</h4>
+            <div class="example">
+                <pre>
+                    <code>
+CREATE PROCEDURE SelectAllCustomers
+AS
+SELECT * FROM Customers
+GO;</code>
+                </pre>
+            </div><br>
+            <div class="example">
+                <pre>
+                    <code>
+EXEC SelectAllCustomers;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <section class="main-section" id="SQL_Comments">
+            <header>SQL Comments</header><br>
+            <p>Comments are used to explain sections of SQL statements, or to prevent execution of 
+                SQL statements.</p><br>
+            <h4>Single Line Comments</h4><br>
+            <p>Single line comments start with --.</p><br>
+            <p>Any text between -- and the end of the line will be ignored 
+                (will not be executed).</p><br>
+            <p>The following example uses a single-line comment as an explanation:</p><br>
+            <div class="example">
+                <pre>
+                    <code>
+--Select all:
+SELECT * FROM Customers;</code>
+                </pre>
+            </div><br>
+            <h4>Multi-line Comments</h4><br>
+            <p>Multi-line comments start with /* and end with */.</p><br>
+            <p>Any text between /* and */ will be ignored.</p><br>
+            <p>The following example uses a multi-line comment as an explanation:</p><br>
+            <div class="example">
+                <pre>
+                    <code>
+/*Select all the columns
+of all the records
+in the Customers table:*/
+SELECT * FROM Customers;</code>
+                </pre>
+            </div><br>
+        </section>
+
+        <p id="link">For more information about SQL, visit 
+            <a href="https://www.w3schools.com/sql/default.asp" target="_blank">w3schools.com</a>.</p><br>
+    </main>
+</body>
+</html>

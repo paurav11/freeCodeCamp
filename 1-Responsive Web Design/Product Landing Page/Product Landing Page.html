@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Landing Page</title>
+    <meta name="author" content="Paurav Shah">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="product.css">    
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+<body>
+<div id="page-wrapper">
+    <header id="header">
+        <nav id="nav-bar">
+            <img src="intel.png" id="header-img" alt="intel logo" width="100" height="50">
+            <ul>
+                <li><a class="nav-link" href="#header">Features</a></li>
+                <li><a class="nav-link" href="#icon">Product Demo</a></li>
+                <li><a class="nav-link" href="#sec3">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="sec1">
+        <h3 id="features">We make Microprocessor chips that are : </h3><br>
+        <div class="feature">
+        <div class="icon"><i class="fas fa-rocket"></i></div>
+        <div class="desc">
+            <h3>Faster</h3>
+            <p>These chips gives your PC a catalyst to make all processes faster than ever before 
+                which ultimately improves multitasking experience and saves a lot of time.</p>
+        </div>
+        </div>
+
+        <div class="feature">
+        <div class="icon"><i class="fas fa-bed"></i></div>
+        <div class="desc">
+            <h3>Reliable</h3>
+            <p>These chips are more reliable than other chips available in the market because they are
+                sold only after passing particular hardware tests.
+            </p>
+        </div>
+        </div>
+
+        <div class="feature">
+        <div class="icon" id="icon"><i class="fas fa-money-bill-wave"></i></div>
+        <div class="desc">
+            <h3>Cost effective</h3>
+            <p>These chips are cost effective as they provide more functionalities with lesser cost, 
+                so large number of customers are interested in our product.</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="sec2">
+        <iframe width="560" height="315" id="video" src="https://www.youtube.com/embed/VwAHkzt6MUI?rel=0" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+        picture-in-picture" allowfullscreen></iframe>
+    </section>
+    
+    <section id="sec3">
+        <div id="pricing">
+            <div class="product">
+                <div class="productname">
+                    <h4>Intel<sup>&reg;</sup> Core&trade; i9-9900 Processor</h4>
+                </div>
+                <div class="productdesc">
+                    <ul>
+                        <li>16MB SmartCache Cache</li>
+                        <li>8 Cores</li>
+                        <li>16 Threads</li>
+                        <li>5 GHz Max Turbo Frequency</li>
+                        <li>9<sup>th</sup> Generation</li>
+                    </ul>
+                </div>
+                <div class="price" id="price1">
+                    <h4>&dollar;979</h4>
+                    <button class="buybtn" type="button">Buy</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="productname">
+                    <h4>Intel<sup>&reg;</sup> Core&trade; i9-9900K Processor</h4>
+                </div>
+                <div class="productdesc">
+                    <ul>
+                        <li>16MB SmartCache Cache</li>
+                        <li>8 Cores</li>
+                        <li>16 Threads</li>
+                        <li>K - Unlocked</li>
+                        <li>5 GHz Max Turbo Frequency</li>
+                        <li>9<sup>th</sup> Generation</li>
+                    </ul>
+                </div>
+                <div class="price" id="price2">
+                    <h4>&dollar;989</h4>
+                    <button class="buybtn" type="button">Buy</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <div class="productname">
+                    <h4>Intel<sup>&reg;</sup> Core&trade; i9-9900HK Processor</h4>
+                </div>
+                <div class="productdesc">
+                    <ul>
+                        <li>16MB SmartCache Cache</li>
+                        <li>8 Cores</li>
+                        <li>16 Threads</li>
+                        <li>HK - High performance graphics,<br>unlocked</li>
+                        <li>5 GHz Max Turbo Frequency</li>
+                        <li>9<sup>th</sup> Generation</li>
+                    </ul>
+                </div>
+                <div class="price" id="price3">
+                    <h4>&dollar;1979</h4>
+                    <button class="buybtn" type="button">Buy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec4">
+        <h3>Subscribe here for Newsletter to get updates related to the launch of new products.</h3>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input type="email" id="email" name="email" placeholder="Enter your email address"><br>
+            <input class="buybtn" type="submit" id="submit" name="submit" value="Subscribe">
+        </form>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; Intel Corporation</p>
+    </footer>
+    <hr>
+</div>
+</body>
+</html>
